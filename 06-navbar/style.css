@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color:lightskyblue; /* Per far vedere il border-bottom */
+}
+
+nav{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+    background: #21252b;
+    border-bottom: 2px solid #fff;
+    /* width: fit-content; */
+}
+
+.start-wrap{
+    display: flex;
+    color: #fff;
+    align-items: center;
+}
+
+.logo{
+    font-size: large;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ul li{
+    margin-left: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: #9b9d9f;
+}
+
+.present-page{
+    pointer-events:none;
+    color: #fff;
+}
+
+.disabled{
+    color: #575c5f;
+}
+
+li select{
+    appearance: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: #9b9d9f;
+    width: 6.5rem;
+    z-index: 1;
+}
+.icon-host{
+    position: relative;
+}
+
+.icon-wrap{
+    position: absolute;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+}
+
+#src::placeholder{
+    color: #919eac;
+}
+
+#src, 
+.sub-butt{
+    padding: .7rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.sub-butt{
+    border: 2px solid #1a8754;
+    color: #1a8754;
+    background-color: transparent;
+}
+
+.sub-butt:hover{
+    border: 2px solid #1a8754;
+    color: #fff;
+    background-color: #1a8754;
+}
+
+@media screen and (max-width: 768px) {
+    .links-wrap,
+    .search-wrap{
+        display: none;
+    }
+    nav::after{
+        content: '';
+        width: 30px;
+        height: 20px;
+        background: repeating-linear-gradient(#fff, #fff 4px, transparent 4px, transparent 8px);
+    }
+}
